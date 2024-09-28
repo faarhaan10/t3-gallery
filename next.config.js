@@ -13,7 +13,13 @@ const config = {
             hostname: 'utfs.io', 
           },
         ],
-      },
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default config;

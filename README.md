@@ -5,9 +5,9 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 ## TODO:
 - [x] Make it deploy (vercel)
 - [x] Scaffold basic ui with mock data
-- [ ] Actually set up a database (vercel postgres)
-- [ ] Attach database to UI
-- [ ] Add authentication (w/ clerk)
+- [x] Actually set up a database (vercel postgres)
+- [x] Attach database to UI
+- [x] Add authentication (w/ clerk)
 - [ ] Add image upload
 - [ ] Error management (w/ Sentry)
 - [ ] Routing/image page (parallel route)

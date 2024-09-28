@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -9,9 +10,14 @@ const Navbar = () => {
           <Link href={"/"}>
             <h1 className="text-2xl">T3 GALLERY</h1>
           </Link>
-          <Link href={"/sign-in"}>
-            <h1 className="text-2xl">Sign in</h1>
-          </Link>
+          <div className="">
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          </div> 
         </div>
       </nav>
     </header>
