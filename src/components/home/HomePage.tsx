@@ -1,21 +1,13 @@
-import Image from 'next/image';
-import imgs from 'selected-rows.json'
-import {getAllPosts, getAllUsers } from '~/server/db';
 
-export default async function HomePage() {
-  const users = await getAllUsers();
-  const posts = await getAllPosts();
-  console.log(posts)
+export default function HomePage() { 
 
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center ">
-      <div className="flex flex-wrap justify-center items-center gap-4 ">
-      {
-        [...imgs,...imgs].map((img,idx) => <div key={img.key+idx} className="">
-          <Image width='400' height='250' src={img.url} alt="" />
-        </div>)
-        }
-        </div>
+    <section className="flex min-h-screen flex-col items-center justify-center">
+      <div className="flex flex-col">
+        <h2 className="text-2xl text-blue-300">Hello, T3</h2>
+        <h1 className="text-4xl font-semibold">This is Farhan</h1>
+        <p className="text-base text-blue-500">- The Naive Hunter</p>
+      </div>
     </section>
   );
 }

@@ -25,4 +25,17 @@ export const getAllUsers = async () => {
 export const getAllPosts = async () => {
   return await db.select().from(schema.posts);
 };
+export const getAllPhotos = async () => {
+  return await db.query.images.findMany();
+};
+
+
+
+interface Photo {
+  name: string;
+  image_url: string;
+}
+export const addPhoto = async (imgData:Photo) => {
+  return await db.insert(schema.images).values(imgData).returning()
+};
 
